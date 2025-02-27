@@ -3,32 +3,68 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Inter", serif;
+
+}
+html{
+  overflow-x: clip;
+  background-color: #000;
+}
+.container {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+
 }
 
-.container {
-  background-color: #4158d0;
+.circulo1{
+  position: absolute;
+  top: -25%;
+  left: -25%;
+  width: 500px;
+  height: 500px;
+  background-color: #4159d08e;
+  filter:blur(16px);
+  border-radius: 50%;
   background-image: linear-gradient(
     43deg,
     #4158d0 0%,
     #c850c0 46%,
     #ffcc70 100%
   );
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  text-align: center;
-  padding: 20px;
+  
 }
+
+.circulo2{
+  position: absolute;
+  bottom: -25%;
+  right: -25%;
+  width: 500px;
+  height: 500px;
+  background-color: #4159d08e;
+  filter:blur(16px);
+  border-radius: 50%;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+  overflow: clip;
+}
+
 
 .hero {
   max-width: 600px;
+  min-height: 100svh;
 }
 
 .hero h1 {
-  font-size: 22px;
-  font-weight: 400;
+  font-size: 32px;
+  font-weight: 600;
   line-height: 1.4;
 }
 
@@ -64,6 +100,10 @@
   color: #fff;
   animation: marquee 15s linear infinite;
   white-space: nowrap;
+  &:hover{
+    scale: 105%;
+  }
+  transition-duration: 0.6s;
 }
 @keyframes marquee {
   from {
@@ -84,6 +124,7 @@
 .second-section h2 {
   font-size: 28px;
   margin-bottom: 20px;
+  color: #fff;
 }
 
 .content-box {
@@ -93,15 +134,17 @@
   width: 80%;
   max-width: 600px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin-inline: auto;
 }
 .content-box p {
   font-size: 20px;
   margin: 10px 0;
 }
 .fade-in {
-  opacity: 0;
+  /* opacity: 0; */
   transform: translateY(20px);
   transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  
 }
 .fade-in.visible {
   opacity: 1;
