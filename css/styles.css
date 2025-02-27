@@ -23,7 +23,7 @@ html{
 .circulo1{
   position: absolute;
   top: -25%;
-  left: -25%;
+  left: -15%;
   width: 500px;
   height: 500px;
   background-color: #4159d08e;
@@ -41,7 +41,7 @@ html{
 .circulo2{
   position: absolute;
   bottom: -25%;
-  right: -25%;
+  right: -15%;
   width: 500px;
   height: 500px;
   background-color: #4159d08e;
