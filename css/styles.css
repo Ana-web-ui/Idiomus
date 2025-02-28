@@ -10,6 +10,8 @@ html {
 }
 
 header {
+  position: fixed;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,11 +21,13 @@ header {
   font-size: 32px;
   background-color: #0097ff;
   text-transform: uppercase;
-border-bottom: 2px solid;
+  border-bottom: 2px solid;
 }
 .container {
   color: #fff;
+  overflow: hidden;
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -38,9 +42,9 @@ border-bottom: 2px solid;
   width: 15vw;
   height: 15vw;
   min-width: 100px;
-  width: 15vw; 
+  width: 15vw;
   height: 15vw;
-  min-width: 100px; 
+  min-width: 100px;
   min-height: 100px;
   max-width: 250px;
   max-height: 250px;
@@ -192,7 +196,6 @@ span {
   transform: translateY(0);
 }
 
-
 footer {
   display: flex;
   align-items: center;
@@ -200,82 +203,82 @@ footer {
   color: #fff;
   font-size: 20px;
   margin: 10px;
-  padding: 15px;
+  padding: 15px 0;
+background-color: #0097ff;
 }
 /* RESPONSIVIDADE */
 @media (max-width: 768px) {
   header {
-    font-size: 28px;
+    font-size: 24px;
     padding: 20px;
   }
 
-/* RESPONSIVIDADE */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 24px;
-  }
+  /* RESPONSIVIDADE */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 24px;
+    }
 
-  .hero p {
-    font-size: 16px;
-  }
+    .hero p {
+      font-size: 16px;
+    }
 
-  .cta-button {
-    font-size: 14px;
-    padding: 12px 20px;
-  }
+    .cta-button {
+      font-size: 14px;
+      padding: 12px 20px;
+    }
 
-  .marquee-content {
-    font-size: 16px;
-  }
+    .marquee-content {
+      font-size: 16px;
+    }
 
-  .circulo1,
-  .circulo2 {
-    width: 250px;
-    height: 250px;
-  }
+    .circulo1,
+    .circulo2 {
+      width: 250px;
+      height: 250px;
+    }
 
-  .content-box p {
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 480px) {
-
-  header {
-    font-size: 22px;
-    padding: 15px;
-  }
-  .hero h1 {
-    font-size: 20px;
-  }
-
-  .hero p {
-    font-size: 14px;
-  }
-
-  .cta-button {
-    font-size: 12px;
-    padding: 10px 15px;
-  }
-
-  .second-section h2 {
-    font-size: 22px;
-  }
-
-  .content-box {
-    width: 95%;
-  }
-
-  .content-box p {
-    font-size: 14px;
+    .content-box p {
+      font-size: 16px;
+    }
   }
 
   @media (max-width: 480px) {
-    .circulo1,
-    .circulo2 {
-      width: 10vw;
-      height: 10vw;
+    header {
+      font-size: 22px;
+      padding: 15px;
+    }
+    .hero h1 {
+      font-size: 20px;
+    }
+
+    .hero p {
+      font-size: 14px;
+    }
+
+    .cta-button {
+      font-size: 12px;
+      padding: 10px 15px;
+    }
+
+    .second-section h2 {
+      font-size: 22px;
+    }
+
+    .content-box {
+      width: 95%;
+    }
+
+    .content-box p {
+      font-size: 14px;
+    }
+
+    @media (max-width: 480px) {
+      .circulo1,
+      .circulo2 {
+        width: 10vw;
+        height: 10vw;
+      }
     }
   }
-}
 }
