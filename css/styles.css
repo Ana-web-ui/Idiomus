@@ -9,6 +9,10 @@ html {
   background-color: #000;
 }
 
+html, body {
+  height: 100%;
+}
+
 header {
   position: fixed;
    width:100%;
@@ -23,6 +27,7 @@ header {
   background-color: #0097ff;
   text-transform: uppercase;
   border-bottom: 2px solid;
+  height: 100px;
 }
 .container {
   color: #fff;
@@ -33,12 +38,11 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 20px;
 }
 
 .circulo1 {
   position: absolute;
-  top: -10vh;
+  top: -0px;
   left: -10vw;
   width: 15vw;
   height: 15vw;
@@ -83,13 +87,13 @@ header {
 }
 
 .hero {
-  min-height: 100svh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   max-width: 600px;
-  min-height: 60svh;
+  z-index: 1;
+  padding: 130px 10px 0 10px;
 }
 
 .hero h1 {
@@ -155,21 +159,20 @@ span {
     transform: translateX(-100%);
   }
 }
-.second-section {
+.ready-to-change-container {
   border-radius: 15px;
-  padding: 25px;
+  padding: 0 10px 30px 10px;
   width: 100%;
   max-width: 500px;
-  margin-top: 20px;
   color: white;
-  min-height: 100svh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 }
 
-.second-section h2 {
+.ready-to-change-container h2 {
   font-size: 24px;
   margin-bottom: 20px;
   color: #fff;
@@ -197,15 +200,13 @@ span {
   transform: translateY(0);
 }
 
-footer {
+.footer-content {
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
   font-size: 20px;
-  margin: 10px;
   padding: 15px 0;
-background-color: #0097ff;
 }
 /* RESPONSIVIDADE */
 @media (max-width: 768px) {
@@ -262,7 +263,7 @@ background-color: #0097ff;
       padding: 10px 15px;
     }
 
-    .second-section h2 {
+    .ready-to-change-container h2 {
       font-size: 22px;
     }
 
@@ -274,12 +275,13 @@ background-color: #0097ff;
       font-size: 14px;
     }
 
-    @media (max-width: 480px) {
-      .circulo1,
-      .circulo2 {
-        width: 10vw;
-        height: 10vw;
-      }
+    .circulo1{
+      top:50px
+    }
+
+    .circulo1, .circulo2 {
+      width: 10vw;
+      height: 10vw;
     }
   }
 }
