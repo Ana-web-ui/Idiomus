@@ -8,6 +8,19 @@ html {
   overflow-x: clip;
   background-color: #000;
 }
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin: auto;
+  padding: 30px;
+  font-size: 32px;
+  background-color: #0097ff;
+  text-transform: uppercase;
+border-bottom: 2px solid;
+}
 .container {
   color: #fff;
   display: flex;
@@ -22,6 +35,9 @@ html {
   position: absolute;
   top: -10vh;
   left: -10vw;
+  width: 15vw;
+  height: 15vw;
+  min-width: 100px;
   width: 15vw; 
   height: 15vw;
   min-width: 100px; 
@@ -62,6 +78,11 @@ html {
 }
 
 .hero {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   max-width: 600px;
   min-height: 60svh;
 }
@@ -83,13 +104,23 @@ html {
   padding: 20px 20px;
   text-decoration: none;
   border-radius: 50px;
-  font-weight: bold;
   margin-top: 15px;
   transition: 0.3s;
+  text-transform: uppercase;
+}
+
+span {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+  padding: 20px;
 }
 
 .cta-button:hover {
-  background-color: #354bb8;
+  background-color: transparent;
+  border: 5px solid;
+  color: #fff;
 }
 .marquee {
   width: 100%;
@@ -122,9 +153,15 @@ html {
 .second-section {
   border-radius: 15px;
   padding: 25px;
+  width: 100%;
   max-width: 500px;
   margin-top: 20px;
   color: white;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .second-section h2 {
@@ -154,6 +191,23 @@ html {
   opacity: 1;
   transform: translateY(0);
 }
+
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  margin: 10px;
+  padding: 15px;
+}
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  header {
+    font-size: 28px;
+    padding: 20px;
+  }
 
 /* RESPONSIVIDADE */
 @media (max-width: 768px) {
@@ -186,6 +240,11 @@ html {
 }
 
 @media (max-width: 480px) {
+
+  header {
+    font-size: 22px;
+    padding: 15px;
+  }
   .hero h1 {
     font-size: 20px;
   }
@@ -218,4 +277,5 @@ html {
       height: 10vw;
     }
   }
+}
 }
